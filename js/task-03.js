@@ -17,5 +17,14 @@ const galleryItem = ({ url, alt }) =>
   `<li class = imgP><img src="${url}" alt="${alt}"></li>`;
 const galleryMarkup = images.map((item) => galleryItem(item));
 const galleryList = document.querySelector(".gallery");
-galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
+galleryList.insertAdjacentHTML("afterbegin", galleryMarkup.join(""));
 galleryList.setAttribute("style", "list-style-type:none");
+
+// const galleryList = document.querySelector(".gallery");
+// const markup = images.map(
+//   ({ url, alt }) => `<li class = imgP><img src="${url}" alt="${alt}"></li>`
+// );
+// const galleryMarkup = images.map((img) => markup);
+// galleryMarkup.join("");
+// galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
+// galleryList.setAttribute("style", "list-style-type:none");
