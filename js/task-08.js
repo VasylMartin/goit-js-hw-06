@@ -11,7 +11,6 @@ function login(event) {
     email: formEl.email.value,
     password: formEl.password.value,
   };
-  console.log(formData);
   form.reset();
 
   if (email === "" || password === "") {
@@ -19,4 +18,5 @@ function login(event) {
     form.reset();
     return;
   }
+  console.log(formData);
 }
